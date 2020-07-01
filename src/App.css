@@ -1,12 +1,80 @@
 .App {
   text-align: center;
+  overscroll-behavior: contain;
+  width:100%;
+  overflow-x: hidden; 
+  overflow-y: hidden; 
+}
+/* .piece2 :hover{
+ border: 2px solid #ff0000;
+
+} */
+.item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+.gridBox{
+  background-color: grey;
+  width: 350px;
+  height: 350px;
+ overflow-x: hidden;
+ overflow-y: hidden;
+
+}
+.dropbox{
+  background-color: grey;
+  border: 1ps solid #282c34;
+  padding: 1px;
+
+}
+.cellule{
+  width:50px;
+  height:50px;
+  border: 2px solid #fff;
+  box-shadow: #61dafb;
+  padding:2px;
+}
+.cellule :hover{
+  border: #282c34;
+  background-color: cadetblue;
+}
+.cell :hover{
+ 
+  background-color: darkcyan;
 }
 
+.box-game{
+  width: 300px;
+  height: 300px;
+}
+
+
+body {
+  overscroll-behavior: contain;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.puzz{
+  cursor: pointer;
+}
+.container{
+  cursor: pointer;
+  margin-left: 120px;
+  border : 2px solid #61dafb;
+  width : 56vh;
+  position: absolute;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -27,7 +95,24 @@
 .App-link {
   color: #61dafb;
 }
+.piece{
+  pointer-events:stroke;
+  cursor: pointer;
+}
+.piece :hover{
+  background-color: coral;
+}
+.puzzle > *{
+  z-index: 1;
+  pointer-events:stroke;
+  cursor: pointer;
 
+}
+
+.puzzle:active{
+  cursor: -webkit-grabbing;
+  background-color: coral;
+ }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
